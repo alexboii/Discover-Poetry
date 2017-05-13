@@ -1,0 +1,43 @@
+{
+    "name": "Poetry tab",
+    "version": "0.1",
+    "description": "Discover new poetry each time you open a new tab",
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": [
+            "js/jquery.js",
+            "page.js"
+        ]
+    }],
+    "background": {
+        "scripts": [
+            "js/jquery.js",
+            "page.js"
+        ]
+    },
+    "permissions": [
+        "storage",
+        "notifications",
+        "activeTab",
+        "https://cors-anywhere.herokuapp.com/",
+        "webRequest",
+        "webRequestBlocking",
+        "https://docs.google.com/feeds/",
+        "https://docs.googleusercontent.com/",
+        "https://spreadsheets.google.com/feeds/",
+        "https://ssl.gstatic.com/",
+        "https://www.googleapis.com/"
+    ],
+    "browser_action": {
+        "default_title": "Does it have my keywords?",
+        "default_icon": "clock.png",
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "manifest_version": 2
+}
