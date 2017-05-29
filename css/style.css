@@ -2,6 +2,11 @@
     font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;
 }
 
+@font-face {
+    font-family: ModernSans;
+    src: url(fonts/MODERNESANS.ttf);
+}
+
 .custom {
     background: #839A47;
     padding-top: 10px;
@@ -12,6 +17,16 @@
     width: 100%;
 }
 
+#poem {
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+#poem-info {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
 .img-author {
     margin-top: 50px;
     position: fixed;
@@ -20,24 +35,43 @@
 }
 
 body {
-    background: #CBDB9F;
+    background: #ECE9E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+hr {
+    background: none;
+    border: none;
+    width: auto;
+    height: 0;
+    border-top: 2px dotted lightgray;
+    border-left: 90px solid transparent;
+    /* shortening left side*/
+    border-right: 90px solid transparent;
+    /* shortening right side*/
 }
 
 h1 {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-family: ModernSans;
     font-size: 40px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    line-height: 26.4px;
+    text-transform: uppercase;
 }
 
 h3 {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-family: ModernSans;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 30px;
     line-height: 15.4px;
 }
 
