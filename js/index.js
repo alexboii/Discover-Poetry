@@ -49,3 +49,9 @@ $.getJSON(randomPoemDir, function(json) {
     displayTitle(poemJSON.title, poemJSON.author);
     console.log(poemJSON);
 });
+
+jQuery(document).ready(function() {
+    $(".toggle-footer").click(function() {
+        $("#footer-content").slideToggle("slow");
+    });
+});
